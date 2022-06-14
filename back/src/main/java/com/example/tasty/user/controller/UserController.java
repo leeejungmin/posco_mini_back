@@ -83,6 +83,7 @@ public class UserController {
 
     @GetMapping("/check")
     public Boolean check(){
+        //test
         return true;
     }
 }
