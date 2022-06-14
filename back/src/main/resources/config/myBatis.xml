@@ -6,9 +6,11 @@
 <configuration>
     <typeAliases>
         <package name="com.example.tasty.user.model"/>
+        <package name="com.example.tasty.shop.model"/>
     </typeAliases>
 
     <mappers>
         <mapper resource="mapper/userMapper.xml"></mapper>
+        <mapper resource="mapper/shoplistMapper.xml"></mapper>
     </mappers>
 </configuration>
