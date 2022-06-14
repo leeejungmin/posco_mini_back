@@ -80,4 +80,9 @@ public class UserController {
                 ? HttpStatus.CREATED : HttpStatus.BAD_REQUEST;
         return new ResponseEntity<>(httpStatus);
     }
+
+    @GetMapping("/check")
+    public Boolean check(){
+        return true;
+    }
 }
