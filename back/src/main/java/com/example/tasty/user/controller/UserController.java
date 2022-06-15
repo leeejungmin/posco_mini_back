@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public List<UserDto> getUserById(@PathVariable String id){
+    public UserDto getUserById(@PathVariable String id){
         UserDto userDto = new UserDto();
         userDto.setId(Integer.valueOf(id));
         return userService.findUserById(userDto);
@@ -89,5 +89,13 @@ public class UserController {
         //test
         return true;
         //another test
+    }
+
+    @GetMapping("/me")
+    public UserDto getUserByMe(){
+//        log.info("cont");
+        UserDto userDto = new UserDto();
+        userDto.setId(securityService.getIdAtToken());
+        return userService.findUserById(userDto);
     }
 }
