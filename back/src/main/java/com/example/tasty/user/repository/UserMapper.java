@@ -12,7 +12,7 @@ public interface UserMapper {
 
     List<UserDto> getUserList();
 
-    List<UserDto> getUserById(UserDto userDto);
+    UserDto getUserById(UserDto userDto);
 
     UserDto getLoginByUserIdAndPassword(UserDto userDto);
 
