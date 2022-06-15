@@ -19,7 +19,7 @@ public class UserServiceImpl implements userService{
     }
 
     @Override
-    public List<UserDto> findUserById(UserDto userDto) {
+    public UserDto findUserById(UserDto userDto) {
         return userMapper.getUserById(userDto);
     }
 

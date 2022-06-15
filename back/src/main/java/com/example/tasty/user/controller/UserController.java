@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public List<UserDto> getUserById(@PathVariable String id){
+    public UserDto getUserById(@PathVariable String id){
         UserDto userDto = new UserDto();
         userDto.setId(Integer.valueOf(id));
         return userService.findUserById(userDto);
@@ -44,14 +44,17 @@ public class UserController {
     public Map login(@RequestBody UserDto userDto){
         //받아온걸 통해서 진행
         //Bearer +token값
-        System.out.println("Gooododd" + userDto);
+        System.out.println("HereLoginDto" + userDto);
         UserDto loginUser = userService.serviceLogin(userDto);
         String token = securityService.createToken(loginUser.getId().toString());
+        System.out.println("Next" + token);
         Map<String, Object> map = new HashMap<>();
         map.put("token", token);
-        map.put("name", loginUser.getName());
+        map.put("user", loginUser);
+        map.put("userId", loginUser.getUserId());
         map.put("phoneNum", loginUser.getPhoneNum());
         return map;
+        //testt
     }
 
     @PostMapping("/create")
@@ -72,7 +75,7 @@ public class UserController {
 
     @PutMapping("/")
     public ResponseEntity<?> updateUserById(@RequestBody UserDto userDto){
-        //tesst
+        //test
         userDto.setId(securityService.getIdAtToken());
         userDto.setPhoneNum(userDto.getPhoneNum());
         userDto.setName(userDto.getName());
@@ -83,6 +86,16 @@ public class UserController {
 
     @GetMapping("/check")
     public Boolean check(){
+        //test
         return true;
+        //another test
+    }
+
+    @GetMapping("/me")
+    public UserDto getUserByMe(){
+//        log.info("cont");
+        UserDto userDto = new UserDto();
+        userDto.setId(securityService.getIdAtToken());
+        return userService.findUserById(userDto);
     }
 }
