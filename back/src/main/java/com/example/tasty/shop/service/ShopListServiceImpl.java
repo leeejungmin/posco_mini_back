@@ -21,7 +21,7 @@ public class ShopListServiceImpl implements ShopListService{
     @Override
     public List<Shop> getShopList() {
         //eturn shopListMapper.getShopList();
-        System.out.println(shopListRepo.findAll());
+        //System.out.println(shopListRepo.findAll());
         return shopListRepo.findAll();
     }
 }

@@ -29,3 +29,5 @@ jwt:
       hibernate:
         ddl-auto: update
       show-sql: 'false'
+
+file: E:\miniPJT\posco_mini_back\back\src\main\resources\static
