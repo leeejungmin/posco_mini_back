@@ -14,5 +14,6 @@
         <mapper resource="mapper/shoplistMapper.xml"></mapper>
         <mapper resource="mapper/shopPostMapper.xml"></mapper>
         <mapper resource="mapper/reviewListMapper.xml"></mapper>
+        <mapper resource="mapper/reviewMapper.xml"></mapper>
     </mappers>
 </configuration>
