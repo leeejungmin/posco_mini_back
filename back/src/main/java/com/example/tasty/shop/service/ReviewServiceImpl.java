@@ -1,7 +1,8 @@
-package com.example.tasty.review.service;
+package com.example.tasty.shop.service;
 
-import com.example.tasty.review.model.ReviewDto;
-import com.example.tasty.review.repository.ReviewMapper;
+
+import com.example.tasty.shop.model.ReviewDto;
+import com.example.tasty.shop.repository.ReviewMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
