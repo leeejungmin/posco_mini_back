@@ -1,7 +1,8 @@
 package com.example.tasty.shop.service;
 
+import com.example.tasty.shop.model.Shop;
 import com.example.tasty.shop.model.ShopDto;
-import com.example.tasty.shop.repository.ShopListMapper;
+import com.example.tasty.shop.repo.ShopListRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +13,15 @@ import java.util.List;
 @Service
 public class ShopListServiceImpl implements ShopListService{
 
+//    @Autowired
+//    ShopListMapper shopListMapper;
     @Autowired
-    ShopListMapper shopListMapper;
+    ShopListRepo shopListRepo;
+
     @Override
-    public List<ShopDto> getShopList() {
-        return shopListMapper.getShopList();
+    public List<Shop> getShopList() {
+        //eturn shopListMapper.getShopList();
+        System.out.println(shopListRepo.findAll());
+        return shopListRepo.findAll();
     }
 }
