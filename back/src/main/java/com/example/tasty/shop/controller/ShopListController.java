@@ -1,5 +1,6 @@
 package com.example.tasty.shop.controller;
 
+import com.example.tasty.shop.model.Shop;
 import com.example.tasty.shop.model.ShopDto;
 import com.example.tasty.shop.service.ShopListService;
 import com.example.tasty.shop.service.ShopListServiceImpl;
@@ -23,7 +24,7 @@ public class ShopListController {
     ShopDto shopDto;
 
     @GetMapping("/")
-    public List<ShopDto> getShopList(){
+    public List<Shop> getShopList(){
 
         log.info(shopListService.getShopList().toString());
         return shopListService.getShopList();
