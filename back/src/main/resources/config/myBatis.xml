@@ -7,13 +7,13 @@
     <typeAliases>
         <package name="com.example.tasty.user.model"/>
         <package name="com.example.tasty.shop.model"/>
-        <package name="com.example.tasty.review.model"/>
     </typeAliases>
 
     <mappers>
         <mapper resource="mapper/userMapper.xml"></mapper>
         <mapper resource="mapper/shoplistMapper.xml"></mapper>
         <mapper resource="mapper/shopPostMapper.xml"></mapper>
+        <mapper resource="mapper/reviewListMapper.xml"></mapper>
         <mapper resource="mapper/reviewMapper.xml"></mapper>
     </mappers>
 </configuration>
