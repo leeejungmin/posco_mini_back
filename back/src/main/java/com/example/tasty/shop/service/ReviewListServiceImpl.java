@@ -17,4 +17,8 @@ public class ReviewListServiceImpl implements ReviewListService{
     public List<ReviewDto> findReviewByShopId(ReviewDto reviewDto) {
         return reviewListMapper.getReviewByShopId(reviewDto);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fbb4ee89cdae7f3e4d8bc7327a704909e60da4c1

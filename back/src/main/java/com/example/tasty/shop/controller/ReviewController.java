@@ -1,9 +1,9 @@
-package com.example.tasty.review.controller;
+package com.example.tasty.shop.controller;
 
 import com.example.tasty.config.SecurityService;
-import com.example.tasty.review.model.ReviewDto;
-import com.example.tasty.review.service.ReviewServiceImpl;
-import lombok.Data;
+
+import com.example.tasty.shop.model.ReviewDto;
+import com.example.tasty.shop.service.ReviewServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
