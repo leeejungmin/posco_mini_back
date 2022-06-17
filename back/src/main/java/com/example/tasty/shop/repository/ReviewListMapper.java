@@ -9,8 +9,4 @@ import java.util.List;
 @Mapper
 public interface ReviewListMapper {
     List<ReviewDto> getReviewByShopId(ReviewDto reviewDto);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fbb4ee89cdae7f3e4d8bc7327a704909e60da4c1

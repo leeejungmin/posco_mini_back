@@ -24,12 +24,8 @@ public class ShopListController {
     ShopDto shopDto;
 
     @GetMapping("/")
-<<<<<<< HEAD
-    public List<ShopDto> getShopList(){
-=======
     public List<Shop> getShopList(){
 
->>>>>>> fbb4ee89cdae7f3e4d8bc7327a704909e60da4c1
         log.info(shopListService.getShopList().toString());
         return shopListService.getShopList();
     }

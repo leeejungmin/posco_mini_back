@@ -51,16 +51,6 @@ public class ShopDetailController {
         map.put("review", reviewList);
 
         return map;
-<<<<<<< HEAD
-    }
-
-    @GetMapping("review/{id}")
-    public List<ReviewDto> getReviewByShopId(@PathVariable String id){
-        ReviewDto reviewDto = new ReviewDto();
-        reviewDto.setShopId(Integer.valueOf(id));
-        return reviewListService.findReviewByShopId(reviewDto);
-=======
->>>>>>> fbb4ee89cdae7f3e4d8bc7327a704909e60da4c1
     }
 
     @GetMapping("review/{id}")
