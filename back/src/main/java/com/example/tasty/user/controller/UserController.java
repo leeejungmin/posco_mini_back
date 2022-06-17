@@ -66,6 +66,7 @@ public class UserController {
 
     @DeleteMapping("/")
     public ResponseEntity<?> deleteUserById(){
+
         UserDto userDto = new UserDto();
         userDto.setId(securityService.getIdAtToken());
         HttpStatus httpStatus = userService.deleteUserById(userDto) == 1
