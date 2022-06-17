@@ -7,7 +7,7 @@
         into
         review(userId,shopId,rate,content,photo)
         values
-        (#{userId},#{shopId}, #{rate},#{content} #{photo})
+        (#{userId},#{shopId}, #{rate},#{content}, #{photo})
 
     </insert>
 
