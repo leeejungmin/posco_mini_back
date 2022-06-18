@@ -1,17 +1,23 @@
 package com.example.tasty.shop.service;
 
 
-import com.example.tasty.shop.model.ReviewDto;
-import com.example.tasty.shop.repository.ReviewMapper;
+import com.example.tasty.shop.model.Review;
+import com.example.tasty.shop.repo.ReviewRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ReviewServiceImpl implements reviewService {
     @Autowired
-    ReviewMapper reviewMapper;
+    ReviewRepo reviewRepo;
     @Override
-    public Integer createReview(ReviewDto reviewDto) {
-       return reviewMapper.createReview(reviewDto);
+    public Boolean createReview(Review reviewDto) {
+
+        Review new_review =reviewRepo.save(reviewDto);
+        if(new_review.getId()!=null){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

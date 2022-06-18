@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ShopListService {
     List<Shop> getShopList();
+
+    List<ShopDto> getShopGrade();
 }
