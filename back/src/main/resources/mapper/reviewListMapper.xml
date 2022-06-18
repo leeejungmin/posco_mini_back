@@ -4,7 +4,7 @@
 <mapper namespace="com.example.tasty.shop.repository.ReviewListMapper">
     <select id="getReviewByShopId" resultType="ReviewDto" parameterType="ReviewDto">
         SELECT
-            r.id, u.userId, r.content, r.photo, r.rate, s.name
+            r.id, u.userId as userName, r.content, r.photo, r.rate, s.name
         FROM
             review r join shop s join user u
         where
