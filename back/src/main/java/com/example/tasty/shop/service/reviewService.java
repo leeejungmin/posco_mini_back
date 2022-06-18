@@ -5,4 +5,5 @@ import com.example.tasty.shop.model.Review;
 
 public interface reviewService {
     Boolean createReview(Review reviewDto);
+    Integer countReview(Integer userId);
 }

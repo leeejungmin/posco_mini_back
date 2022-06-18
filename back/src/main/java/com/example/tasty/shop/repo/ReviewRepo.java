@@ -16,4 +16,6 @@ public interface ReviewRepo extends JpaRepository<Review,Integer> {
 //            " JOIN (SELECT r.id, r.userId, AVG(r.rate) AS rate, r.content,  r.photo FROM review r GROUP BY r.id) g WHERE g.id = :shopId ", nativeQuery = true)
 //    List<Review> findByShopId(@Param("shopId") Integer shopId);
 
+    Integer countByUserId(Integer userId);
+
 }

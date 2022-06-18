@@ -20,4 +20,9 @@ public class ReviewServiceImpl implements reviewService {
             return false;
         }
     }
+
+    @Override
+    public Integer countReview(Integer userId) {
+        return reviewRepo.countByUserId(userId);
+    }
 }

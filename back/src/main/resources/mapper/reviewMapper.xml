@@ -11,5 +11,11 @@
 
     </insert>
 
+    <select id="countReview" parameterType="int">
+        select count *
+        from review
+        where userId = #{userId}
+    </select>
+
 
 </mapper>

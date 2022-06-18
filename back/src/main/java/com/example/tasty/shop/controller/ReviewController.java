@@ -41,4 +41,11 @@ public class ReviewController {
         return new ResponseEntity<>(httpStatus);
     }
 
+    @GetMapping("/count")
+    public Integer countReview(){
+        Integer userId = securityService.getIdAtToken();
+        Integer count = reviewService.countReview(userId);
+        return count;
+    }
+
 }
