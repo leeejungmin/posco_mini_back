@@ -10,4 +10,6 @@ import java.util.List;
 public interface ShopPostMapper {
     List<ShopDto> getShopPostById(ShopDto shopDto);
 
+    List<ShopDto> getShopGrade();
+
 }

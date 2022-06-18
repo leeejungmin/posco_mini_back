@@ -2,7 +2,6 @@ package com.example.tasty.shop.controller;
 
 import com.example.tasty.shop.model.Shop;
 import com.example.tasty.shop.model.ShopDto;
-import com.example.tasty.shop.service.ShopListService;
 import com.example.tasty.shop.service.ShopListServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +20,19 @@ public class ShopListController {
     ShopListServiceImpl shopListService;
 
     @Autowired
-    ShopDto shopDto;
 
     @GetMapping("/")
     public List<Shop> getShopList(){
 
-        log.info(shopListService.getShopList().toString());
+        //log.info(shopListService.getShopList().toString());
         return shopListService.getShopList();
     }
+
+    @GetMapping("/rate")
+    public List<ShopDto> getShopRate(){
+
+        return shopListService.getShopGrade();
+    }
+
+
 }

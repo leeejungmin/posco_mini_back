@@ -17,4 +17,8 @@
         WHERE
             g.shopId = s.id AND s.id = #{id}
     </select>
+    <select id="getShopGrade" resultType="ShopDto">
+        select * from
+        shop s join (select shopId, avg(rate) as grade from review group by shopId) r where s.id = r.shopId
+    </select>
 </mapper>
