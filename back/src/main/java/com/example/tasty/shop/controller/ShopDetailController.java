@@ -54,6 +54,7 @@ public class ShopDetailController {
 
     @GetMapping("review/{id}")
     public List<ReviewDto> getReviewByShopId(@PathVariable String id){
+        System.out.println(("reviewId.................")+ id);
         ReviewDto reviewDto = new ReviewDto();
         reviewDto.setShopId(Integer.valueOf(id));
         return reviewListService.findReviewByShopId(reviewDto);
