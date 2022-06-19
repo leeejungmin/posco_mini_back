@@ -49,12 +49,12 @@ public class UserController {
         String token = securityService.createToken(loginUser.getId().toString());
         System.out.println("Next" + token);
         Map<String, Object> map = new HashMap<>();
-        map.put("token", token);
+        System.out.println("token,user,userId,phoneNum" + loginUser);
+        map.put("token",token);
         map.put("user", loginUser);
         map.put("userId", loginUser.getUserId());
         map.put("phoneNum", loginUser.getPhoneNum());
         return map;
-        //testt
     }
 
     @PostMapping("/create")
