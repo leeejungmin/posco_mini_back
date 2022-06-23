@@ -22,13 +22,14 @@ public class ChatController {
     @MessageMapping("/message") // app/message
     @SendTo("/chatroom/public")
     public Message receivePublicMessage(@Payload Message message){
+        System.out.println("amos" + message);
         return message;
     }
 
     @MessageMapping("/private-message")
     public Message receiverPrivateMessage(@Payload Message message){
         // /user/David/private
-        simpMessagingTemplate.convertAndSendToUser(message.getReceiverName(), "/private", message);
+        simpMessagingTemplate.convertAndSendToUser(message.getReceiverName(), "/private", message);// 개인 메세지 보내기
         return message;
     }
 }
