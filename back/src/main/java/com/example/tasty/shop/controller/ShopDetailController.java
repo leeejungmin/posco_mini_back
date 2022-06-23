@@ -8,10 +8,8 @@ import com.example.tasty.shop.service.ShopListServiceImpl;
 import com.example.tasty.shop.service.ShopPostServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,9 +30,8 @@ public class ShopDetailController {
     SecurityService securityService;
 
 
-    @GetMapping("detail/{id}")
+    @PostMapping("detail/{id}")
     public HashMap<String, Object> getShopPostById(@PathVariable String id){
-
         HashMap<String, Object> map = new HashMap<String, Object>();
 
         ShopDto shopDto = new ShopDto();
@@ -48,13 +45,13 @@ public class ShopDetailController {
 
         map.put("shop", shopDetail);
         map.put("review", reviewList);
+        System.out.println("this is map........"+map);
 
         return map;
     }
 
     @GetMapping("review/{id}")
     public List<ReviewDto> getReviewByShopId(@PathVariable String id){
-        System.out.println(("reviewId.................")+ id);
         ReviewDto reviewDto = new ReviewDto();
         reviewDto.setShopId(Integer.valueOf(id));
         return reviewListService.findReviewByShopId(reviewDto);
