@@ -21,7 +21,4 @@ public interface UserMapper {
     Integer deleteUserById(UserDto userDto);
 
     Integer updateUserById(UserDto userDto);
-
-
-
 }

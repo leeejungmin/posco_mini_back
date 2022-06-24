@@ -13,11 +13,14 @@
 
 <select id="findAll" resultType="PartyDto">
     SELECT
-    u.name, p.shopId
+        p.id, p.userId, p.shopId, u.name
     FROM
-    party p
-    LEFT JOIN User u
-    On p.userId = u.id
-    ORDER BY P.shopId;
+        party p
+    LEFT JOIN
+        User u
+    On
+        p.userId = u.id
+    ORDER BY
+        P.shopId;
 </select>
 </mapper>
