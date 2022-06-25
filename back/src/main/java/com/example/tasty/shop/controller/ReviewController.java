@@ -43,8 +43,11 @@ public class ReviewController {
 
     @GetMapping("/count")
     public Integer countReview(){
+        System.out.println("count..............................");
         Integer userId = securityService.getIdAtToken();
+
         Integer count = reviewService.countReview(userId);
+        System.out.println("count.............................."+userId+count);
         return count;
     }
 
