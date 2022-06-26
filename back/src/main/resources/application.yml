@@ -45,3 +45,5 @@ jwt:
 
 file: E:\Project_back\posco_mini_back\back\src\main\resources\static
 
+app:
+  firebase-configuration-file: C:\Users\geunyeong\Desktop\native-back\posco_mini_back\back\src\main\resources\keystore\google-services.json
