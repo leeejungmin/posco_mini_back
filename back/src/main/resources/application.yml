@@ -44,8 +44,8 @@ jwt:
       show-sql: 'false'
 
 
-file: E:\Project_back\posco_mini_back\back\src\main\resources\static
+file: E:\miniPJT\posco_mini_back\back\src\main\resources\static
 
-app:
-  firebase-configuration-file: C:\Users\geunyeong\Desktop\native-back\posco_mini_back\back\src\main\resources\keystore\google-services.json
+#app:
+#  firebase-configuration-file: C:\Users\geunyeong\Desktop\native-back\posco_mini_back\back\src\main\resources\keystore\google-services.json
 

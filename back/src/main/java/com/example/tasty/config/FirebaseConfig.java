@@ -13,8 +13,8 @@ import java.io.FileInputStream;
 
 @Configuration
 public class FirebaseConfig {
-    @Value("${app.firebase-configuration-file}")
-    private Resource resource;
+//    @Value("${app.firebase-configuration-file}")
+//    private Resource resource;
 
 
     @PostConstruct
@@ -22,7 +22,7 @@ public class FirebaseConfig {
         try {
             // Service Account를 이용하여 Fireabse Admin SDK 초기화
             FileInputStream serviceAccount =
-                    new FileInputStream("E:\\final_mini\\posco_mini_back\\back\\src\\main\\resources\\keystore\\tasty-ca0bd-firebase-adminsdk-ywj7p-a0b5782d24.json");
+                    new FileInputStream("E:\\miniPJT\\posco_mini_back\\back\\src\\main\\resources\\keystore\\tasty-ca0bd-firebase-adminsdk-ywj7p-a0b5782d24.json");
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
