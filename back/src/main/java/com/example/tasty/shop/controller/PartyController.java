@@ -1,4 +1,5 @@
 package com.example.tasty.shop.controller;
+import com.example.tasty.config.SecurityService;
 import com.example.tasty.user.model.UserDto;
 import com.example.tasty.shop.model.PartyDto;
 import com.example.tasty.shop.service.PartyServiceImpl;
@@ -16,13 +17,18 @@ public class PartyController {
     @Autowired
     PartyServiceImpl partyService;
 
+    @Autowired
+    SecurityService securityService;
+
+
     @PostMapping("/create")
     public HashMap<String, Object> registerParty(@RequestBody PartyDto partyDto) {
 
+        Integer userIdByToken = securityService.getIdAtToken();
+        System.out.println(".................userId"+userIdByToken);
         System.out.println(".................party"+ partyDto);
-
+        partyDto.setUserId(userIdByToken);
         HashMap<String, Object> map = new HashMap<String, Object>();
-
 
         LocalDate localDate = LocalDate.now();
         partyDto.setDate(String.valueOf(localDate));
